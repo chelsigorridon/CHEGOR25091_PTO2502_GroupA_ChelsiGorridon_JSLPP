@@ -478,3 +478,21 @@ textarea {
     padding-bottom: 0;
   }
 }
+
+#save-task-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #635FC7;
+  border:none;
+  color: #FFFFFF;
+}
+
+#cancel-task-btn{
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:#EA5555;
+  border:none;
+  color: #FFFFFF;
+}
