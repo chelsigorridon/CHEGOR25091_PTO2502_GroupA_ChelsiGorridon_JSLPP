@@ -12,16 +12,20 @@ export async function fetchTasksFromApi() {
     return tasks;
   } catch (error) {
     console.error("Error fetching tasks:", error);
-    // fallback to tasks in storage or empty array
+    
     return loadTasksFromStorage();
   }
 }
 
 export async function loadInitialTasks() {
+  const loadingMessage = document.getElementById("loading-message");
+  loadingMessage.style.display = "block";
+
   let tasks = loadTasksFromStorage();
   if (tasks.length === 0) {
     tasks = await fetchTasksFromApi();
   }
+  loadingMessage.style.display = "none";
   renderTasks(tasks);
 }
 document.addEventListener("DOMContentLoaded", () => {
