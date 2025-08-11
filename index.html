@@ -49,7 +49,17 @@
         </button>
       </header>
 
+
+
       <div class="container">
+       <div id="loading-message" style="display:none; text-align:center; margin: 1rem 0;">
+        Loading tasks, please wait...
+       </div>
+       <div
+       id="error-message"
+       style="display:none; color: red; text-align: center; margin: 1rem 0;">  
+       Error - Tasks could not load. Please try again later.    
+      </div>
         <main class="card-column-main">
           <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
           <div class="column-div" data-status="todo">
