@@ -369,6 +369,23 @@ textarea {
   resize: vertical;
 }
 
+#save-task-btn,#cancel-task-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #635FC7;
+  border:none;
+  color: #FFFFFF;
+  margin: auto;
+  margin-top: 15px;
+  align-content: center;
+  
+}
+
+#cancel-task-btn{
+ background: #EA5555;
+}
+
 /* ========================
    Responsive Styles
 ======================== */
@@ -477,22 +494,22 @@ textarea {
     padding-top: 0;
     padding-bottom: 0;
   }
-}
 
-#save-task-btn {
-  width: 200px;
+#save-task-btn,#cancel-task-btn {
+  width: 300px;
   height: 40px;
   border-radius: 20px;
   background-color: #635FC7;
   border:none;
   color: #FFFFFF;
+  margin: auto;
+  margin-top: 15px;
+  
 }
 
 #cancel-task-btn{
-  width: 200px;
-  height: 40px;
-  border-radius: 20px;
-  background-color:#EA5555;
-  border:none;
-  color: #FFFFFF;
+ background: #EA5555;
 }
+}
+
+
