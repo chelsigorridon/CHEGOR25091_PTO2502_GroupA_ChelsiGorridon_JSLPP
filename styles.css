@@ -387,6 +387,34 @@ textarea {
  margin-left: 90px;
 }
 
+#sidebar-toggle {
+  width: 276px;
+  height: 49.75px;
+  border-radius: 0 100px 100px 0; 
+  border: none;
+  background-color: #F4F7FD;
+  color: #635FC7;
+  font-weight: 700;
+  font-size: 15px;
+  
+}
+
+#theme-toggle {
+  width: 251px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #F4F7FD;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 16px; 
+}
+
+.side-bar-extras{
+  display: flexbox;
+  flex-direction: column;
+  margin-top: 380px;
+}
+
 /* ========================
    Responsive Styles
 ======================== */
