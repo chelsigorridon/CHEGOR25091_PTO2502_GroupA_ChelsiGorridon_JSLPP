@@ -3,8 +3,12 @@ import {
 } from "../utils/localStorage.js";
 
 
-let currentTaskId = null; // Make sure you set this when opening the modal
-
+let currentTaskId = null;
+/**
+ * Sets up the Save button in the task modal.
+ * Updates the task title, description, and status, saves to localStorage,
+ * and updates the task board DOM immediately.
+ */
 export function saveTaskBtn() {
   const titleInput = document.getElementById("title-input");
   const descInput = document.getElementById("desc-input");
@@ -41,7 +45,11 @@ export function saveTaskBtn() {
   });
 }
 
-// Updates the DOM for the task without reloading
+/**
+ * Updates a single task element in the DOM.
+ * @param {number|string} taskId - The ID of the task to update.
+ * @param {Object} updates - Object containing updated title, description, and status.
+ */
 function updateTaskOnBoard(taskId, { title, description, status }) {
   const taskEl = document.querySelector(`.task-div[data-id='${taskId}']`);
   if (taskEl) {
