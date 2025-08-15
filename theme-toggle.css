@@ -1,0 +1,58 @@
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f4f7fd;
+  --primary-font-color: #000000;
+  --secondary-font-color: #828fa3;
+  --primary-btn-color: #635fc7;
+  --primary-box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.1015); /* Subtle shadow for card depth */
+  --sidebar-width: 300px; /* Sidebar fixed width */
+  --extra-colour: #e4ebfa; /* Light divider color */
+  --black-butnot: #20212C;
+  --grey-black: #2B2C37;
+  
+}
+
+
+body.dark-mode {
+  background-color: var(--black-butnot);
+  color: white;
+}
+
+body.dark-mode .task-card {
+  background-color: var(--primary-btn-color);
+  color: white;
+}
+
+body.dark-mode button,
+body.dark-mode select,
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: var(--primary-btn-color);
+  color: white;
+  border: 1px solid #444;
+}
+
+           
+
+body.dark-mode .side-bar  {
+  background-color: var(--grey-black);
+
+}
+
+body.dark-mode .boards-nav-links-div {
+  background-color: var(--grey-black);
+}
+
+body.dark-mode .sticky-header {
+  background-color: var(--grey-black);
+  color: var(--primary-color);
+}
+
+body.dark-mode .theme-toggle-div {
+  background-color: var(--primary-btn-color);
+}
+
+body.dark-mode .side-bar-toggle{
+  background-color: var(--primary-btn-color);
+}
