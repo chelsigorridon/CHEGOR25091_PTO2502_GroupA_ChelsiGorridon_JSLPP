@@ -1,65 +1,55 @@
-import {
-  saveTasksToStorage,
-} from "../utils/localStorage.js";
+import { saveTasksToStorage } from "../utils/localStorage.js";
+import { loadTasksFromAPIOrStorage } from "../utils/fetchingApi.js";
+import { clearExistingTasks, renderTasks } from "../ui/render.js";
+import { resetForm } from "../tasks/formUtils.js";
 
-
-let currentTaskId = null;
 /**
  * Sets up the Save button in the task modal.
- * Updates the task title, description, and status, saves to localStorage,
- * and updates the task board DOM immediately.
+ * When clicked, it reads input values from the modal,
+ * creates a new task, saves it to localStorage, updates the DOM,
+ * and closes the modal.
  */
+
+
 export function saveTaskBtn() {
   const titleInput = document.getElementById("title-input");
   const descInput = document.getElementById("desc-input");
   const statusSelect = document.getElementById("select-status");
+  const prioritySelect = document.getElementById("select-priority");
   const saveBtn = document.getElementById("save-task-btn");
   const overlay = document.querySelector(".modal-overlay");
+
+/**
+   * Handles the click event for the Save button.
+   * Reads input values, validates them, creates a new task,
+   * saves tasks to localStorage, updates the DOM, and closes the modal.
+   */
 
   saveBtn.addEventListener("click", async () => {
     const title = titleInput.value.trim();
     const description = descInput.value.trim();
     const status = statusSelect.value;
+    const priority = prioritySelect.value;
 
     if (!title) return alert("Title cannot be empty!");
 
-    // Load tasks from localStorage
-    const tasks = await loadTasksFromStorageOrAPI();
-    const taskIndex = tasks.findIndex((t) => t.id == currentTaskId);
+    const tasks = await loadTasksFromAPIOrStorage();
 
-    if (taskIndex > -1) {
-      // Update task in the array
-      tasks[taskIndex].title = title;
-      tasks[taskIndex].description = description;
-      tasks[taskIndex].status = status;
+    const newTask = {
+      id: tasks.length ? Math.max(...tasks.map((t) => t.id)) + 1 : 1,
+      title,
+      description,
+      status,
+      priority
+    };
 
-      // Save back to localStorage
-      saveTasksToStorage(tasks);
+    // Reset modal inputs and close moda    
+    const updatedTasks = [...tasks, newTask];
+    saveTasksToStorage(updatedTasks);
 
-      // Update the task element on the board
-      updateTaskOnBoard(currentTaskId, { title, description, status });
-
-      // Close the modal
-      overlay.classList.remove("active"); // assuming this hides modal
-    }
+    clearExistingTasks();
+    renderTasks(updatedTasks);
+    resetForm();
+    overlay.classList.remove("active");
   });
-}
-
-/**
- * Updates a single task element in the DOM.
- * @param {number|string} taskId - The ID of the task to update.
- * @param {Object} updates - Object containing updated title, description, and status.
- */
-function updateTaskOnBoard(taskId, { title, description, status }) {
-  const taskEl = document.querySelector(`.task-div[data-id='${taskId}']`);
-  if (taskEl) {
-    taskEl.querySelector(".task-title").textContent = title;
-    taskEl.querySelector(".task-desc").textContent = description;
-
-    // Move task to the correct column if status changed
-    const newColumn = document.querySelector(`.column-div[data-status='${status}'] .tasks-container`);
-    if (newColumn && taskEl.parentElement !== newColumn) {
-      newColumn.appendChild(taskEl);
-    }
-  }
 }
