@@ -14,13 +14,18 @@
 }
 
 
-body.dark-mode {
+body.dark-mode #headline-sidepanel, #board-btn {
+  color: var(--primary-color);
+}
+
+
+
+body.dark-mode  {
   background-color: var(--black-butnot);
   color: white;
 }
 
 body.dark-mode .task-card {
-  background-color: var(--primary-btn-color);
   color: white;
 }
 
@@ -28,15 +33,20 @@ body.dark-mode button,
 body.dark-mode select,
 body.dark-mode input,
 body.dark-mode textarea {
-  background-color: var(--primary-btn-color);
-  color: white;
+  color: var(--secondary-font-color);
   border: 1px solid #444;
+}
+
+body.dark-mode .task-div {
+  background-color: var(--grey-black);
+  color: var(--primary-color);
 }
 
            
 
 body.dark-mode .side-bar  {
   background-color: var(--grey-black);
+  color: var(--primary-color);
 
 }
 
@@ -52,7 +62,22 @@ body.dark-mode .sticky-header {
 body.dark-mode .theme-toggle-div {
   background-color: var(--primary-btn-color);
 }
-
-body.dark-mode .side-bar-toggle{
+ 
+body.dark-mode #sidebar-toggle  {
   background-color: var(--primary-btn-color);
+  color: var(--primary-color)
+}
+
+body.dark-mode #theme-toggle-div {
+  background-color: var(--primary-btn-color);
+  color: var(--primary-color)
+}
+
+body.dark-mode .theme-switch  {
+  background-color: var(--black-butnot);
+  
+}
+
+body.dark-mode .theme-tog-div {
+  background-color: var(--black-butnot);
 }
