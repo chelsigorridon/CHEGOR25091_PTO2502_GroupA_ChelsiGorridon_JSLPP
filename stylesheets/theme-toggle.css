@@ -13,20 +13,22 @@
   
 }
 
-
+/* Dark mode text for headline and board button */
 body.dark-mode #headline-sidepanel, #board-btn {
   color: var(--primary-color);
 }
-
+/* Dark mode background and text for main layout */
 body.dark-mode #layout{
   background-color: var(--black-butnot);
   color: var(--primary-color);
 }
 
+/* Dark mode text for task cards */
 body.dark-mode .task-card {
   color: white;
 }
 
+/* Dark mode colors for form elements */
 body.dark-mode button,
 body.dark-mode select,
 body.dark-mode input,

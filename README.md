@@ -1,20 +1,27 @@
-# JSL04 Project: Task Board with Local Storage Persistence and Task Creation Kanban App 
+# JSLPP Project:Kanban App 
 
 ---
 
-## What is Task Board with Local Storage Persistence and Task Creation? :
-A Task Board with Local Storage and Task Creation is a simple web app that allows users to create tasks with a title, description, and status, and then visually display those tasks in columns like "To Do", "In Progress", and "Done". The app uses the browser's local storage to save the tasks so that they remain even after the page is refreshed. I'll be implementing this to my Kanban App. 
+## Links 
+- Presentation Video 
+- Netlify 
+- Figma
+
+
+## What is the Kanban App? :
+This Kanban app is a web-based task management tool that helps you organize, track, and manage tasks visually using the Kanban methodology. Tasks are displayed in columns representing different stages of a workflow, making it easy to see what needs to be done, what’s in progress, and what’s completed.
 
 ---
 
 ## Key Features:
 
-- Click on Add New task and a interactive modal will pop up. 
-- Enter a Task Title, Description, and Status via modal.
-- Accepts only valid statuses: "TODO", "DOING", or "DONE".
-- Automatically corrects letter casing.
-- All fields must be filled in to create a new task 
-- task will save to local storage and show on the main screen
+- Add, edit, and delete tasks
+- Task status management: Move tasks between To Do, Doing, and Done columns
+- Priority tracking: Assign priority levels (High, Medium, Low) to tasks
+- Persistent storage: Tasks are saved in local storage and optionally fetched from an API
+- Responsive design: Works on desktop and mobile
+- Dark mode toggle: Switch between light and dark themes
+- Modal-based task editing: Click a task to edit details in a modal
 
 --- 
 
@@ -25,17 +32,50 @@ A Task Board with Local Storage and Task Creation is a simple web app that allow
 - Javascript
 - Visual Studio Code (VS Code)
 - Git Version control
+- Local Storage for task persistence
+- Optional: API integration for dynamic task loading
+- Uploaded onto Netlify 
 
 ---
 
 ## Working usage and interactive instructions:
 
-1. Go into the Kanban Website
-2. All the task should be under column to , doing , done
-3. Click "Add New task" button and the modal will pop up 
-6. You should be able to add your task name , description and change your status. 
-7. Click on the red x in the corner to exit the modal 
-8. Click on create task button to save it and add it to the main screen
+# Quick Start
+- Open index.html in your browser.
+- The app automatically loads tasks from the API or local storage. If none exist, it uses default tasks.
+- Viewing Tasks
+
+# Tasks are displayed in three columns:
+- To Do – Not started
+- Doing – In progress
+- Done – Completed
+- Column headers show the number of tasks.
+- Adding a Task
+- Click “+ Add New Task”.
+- Fill in the Title, Description, Status, and Priority.
+
+# Click “Create Task”.
+- Task appears immediately and is saved to local storage.
+- Editing a Task
+- Click a task card.
+- Update Title, Description, Status, or Priority in the modal.
+
+# Click “Save Changes”.
+- Changes reflect immediately on the board and in local storage.
+- Deleting a Task
+- Open the task modal.
+- Click “Delete Task”.
+- The task is removed from the board and local storage.
+
+# Sidebar & Dark Mode
+- Sidebar: Access boards, toggle theme, or collapse sidebar.
+- Mobile: Click the logo to open a smaller sidebar modal.
+- Dark Mode: Toggle between light and dark themes. Preference is saved locally.
+
+# Persistence
+- All changes are saved automatically.
+- Reloading restores your tasks exactly as you left them.
+- API loads tasks first; if it fails, the app falls back to local storage.
 
 
 

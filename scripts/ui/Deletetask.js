@@ -1,10 +1,15 @@
 import { loadTasksFromStorage } from "../utils/localStorage";
 
-// Keep track of currently edited task
+/** 
+ * Keeps track of the ID of the currently edited task.
+ * @type {number|null}
+ */
 let currentTaskId = null;
 
 /**
- * Sets up Delete button in the modal to remove a task.
+ * Sets up the Delete button in the task modal.
+ * When clicked, asks the user for confirmation, deletes the task from localStorage,
+ * removes it from the DOM, and closes the modal.
  */
 export function setupDeleteTaskBtn() {
   const deleteBtn = document.getElementById("delete-task-btn");
@@ -15,7 +20,11 @@ export function setupDeleteTaskBtn() {
     const confirmed = confirm("Are you sure you want to delete this task?");
     if (!confirmed) return;
 
-    // Load tasks from localStorage
+ /** 
+     * Ask user to confirm deletion.
+     * @type {boolean} confirmed
+     */
+   
     const tasks = await loadTasksFromStorage();
 
     // Filter out the task being deleted

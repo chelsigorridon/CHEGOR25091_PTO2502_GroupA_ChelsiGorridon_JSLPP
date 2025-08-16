@@ -1,10 +1,27 @@
+/**
+ * Sets up the close button for the task modal.
+ * Clicking the close button will close the task modal.
+ */
+
 import { addNewTask } from "../tasks/taskManager.js";
 
 export function setupModalCloseHandler() {
+  
+  /** @type {HTMLDialogElement} Task modal element */
+
   const modal = document.getElementById("task-modal");
+  /** @type {HTMLElement} Close button inside the task modal */
+
   const closeBtn = document.getElementById("close-modal-btn");
+
   closeBtn.addEventListener("click", () => modal.close());
 }
+
+
+/**
+ * Sets up the "Add New Task" modal and its form handlers.
+ * Handles opening the modal, cancelling, and submitting the form.
+ */
 
 export function setupNewTaskModalHandler() {
   const overlay = document.querySelector(".modal-overlay");
