@@ -26,3 +26,4 @@ export function loadTasksFromStorage() {
 export function saveTasksToStorage(tasks) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+console.log("localStorage.js loaded successfully.");
