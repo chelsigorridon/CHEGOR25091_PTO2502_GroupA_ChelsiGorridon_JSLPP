@@ -16,7 +16,7 @@ export async function loadTasksFromStorageOrAPI() {
 
   // No tasks in localStorage — fetch from API
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos"); // <-- replace with your API
+    const response = await fetch("https://jsl-kanban-api.vercel.app/"); 
     if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
     const apiTasks = await response.json();
 
