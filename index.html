@@ -6,7 +6,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-
+     <link rel="stylesheet" href="./theme-toggle.css"/>
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="icon"
@@ -14,22 +14,43 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script defer src="../scripts/main.js" type="module" ></script>
+    <script type="module" defer src="./scripts/main.js"></script>
     <title>Kanban Task Management</title>
   </head>
 
   <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+   
     <nav class="side-bar" id="side-bar-div">
       <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
       </div>
+     
+        <!-- Smaller Nav Modal -->
+    <dialog id="nav-modal" class="nav-modal">
+   <div class="modal-header">
+    <button type="button" id="open-nav-modal">&times;</button>
+    <button type="button" id="close-nav-modal">&times;</button>
+    </div>
+  <div class="modal-content">
+    <p>This is a smaller modal for your nav bar.</p>
+  </div>
+  </dialog> 
 
       <div class="boards-nav-links-div" id="boards-nav-links-div">
         <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
-        <button class="board-btn">Launch Career</button>
+        <button id="board-btn"  class="board-btn">Launch Career</button>
+        <div class="side-btns">
+        <div id="theme-toggle-div" class="theme-tog-div">
+     <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+    </label>
+    <span id="theme-label"> </span>
+   </div>
       </div>
-      <button id="sidebar-toggle"> 🚫 Hide Side Bar </button>
+      <button id="sidebar-toggle" "> 🚫 Hide Side Bar </button>
+      </div>
     </nav>
 
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
@@ -114,6 +135,13 @@
           <option value="doing">doing</option>
           <option value="done">done</option>
         </select>
+
+        <label for="task-priority">Priority</label>
+        <select name="Priority" id="select-priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
       </form>
       <button id="save-task-btn">Save Changes</button>
            <button id="cancel-task-btn">Delete Task</button>
@@ -168,6 +196,14 @@
             <option value="doing">doing</option>
             <option value="done">done</option>
           </select>
+           
+           <label for="task-priority">Priority</label>
+           <select name="Priority" id="select-priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
         </div>
         <div class="button-group">
           <input
