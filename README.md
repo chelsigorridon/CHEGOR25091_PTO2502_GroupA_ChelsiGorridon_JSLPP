@@ -1,11 +1,11 @@
-# JSLPP Project:Kanban App 
+# JSLPP Project: Kanban App 
 
 ---
 
 ## Links 
-- Presentation Video 
-- Netlify 
-- Figma
+- Presentation Video: https://drive.google.com/file/d/1IgDjRbj1gLgNtLd9vJ6MNF8RH1LVFwY9/view?usp=sharing
+- Netlify : https://chelsi-jslpp-0a841b.netlify.app/
+- Figma: https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=6033-11092&m=dev&t=Y3v9Z2mrBCfgXP8M-1
 
 
 ## What is the Kanban App? :
@@ -40,12 +40,12 @@ This Kanban app is a web-based task management tool that helps you organize, tra
 
 ## Working usage and interactive instructions:
 
-# Quick Start
+## Quick Start
 - Open index.html in your browser.
 - The app automatically loads tasks from the API or local storage. If none exist, it uses default tasks.
 - Viewing Tasks
 
-# Tasks are displayed in three columns:
+## Tasks are displayed in three columns:
 - To Do – Not started
 - Doing – In progress
 - Done – Completed
@@ -54,25 +54,25 @@ This Kanban app is a web-based task management tool that helps you organize, tra
 - Click “+ Add New Task”.
 - Fill in the Title, Description, Status, and Priority.
 
-# Click “Create Task”.
+## Click “Create Task”.
 - Task appears immediately and is saved to local storage.
 - Editing a Task
 - Click a task card.
 - Update Title, Description, Status, or Priority in the modal.
 
-# Click “Save Changes”.
+## Click “Save Changes”.
 - Changes reflect immediately on the board and in local storage.
 - Deleting a Task
 - Open the task modal.
 - Click “Delete Task”.
 - The task is removed from the board and local storage.
 
-# Sidebar & Dark Mode
+## Sidebar & Dark Mode
 - Sidebar: Access boards, toggle theme, or collapse sidebar.
 - Mobile: Click the logo to open a smaller sidebar modal.
 - Dark Mode: Toggle between light and dark themes. Preference is saved locally.
 
-# Persistence
+## Persistence
 - All changes are saved automatically.
 - Reloading restores your tasks exactly as you left them.
 - API loads tasks first; if it fails, the app falls back to local storage.
