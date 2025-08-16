@@ -36,3 +36,7 @@ export function openTaskModal(task) {
   document.getElementById("task-status").value = task.status;
   modal.showModal();
 }
+
+console.log("modalHandler.js loaded successfully.");
+
+

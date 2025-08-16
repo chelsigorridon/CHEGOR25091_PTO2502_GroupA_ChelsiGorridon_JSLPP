@@ -649,6 +649,24 @@ input:checked + .slider:before {
  background: #EA5555;
 }
 }
+
+.side-btns {
+  width: 340px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+#theme-toggle-div {
+  width: 260px;
+  height: 48px;
+
+}
+
+.logo-mobile {
+  
+}
+
+
 }
 
 

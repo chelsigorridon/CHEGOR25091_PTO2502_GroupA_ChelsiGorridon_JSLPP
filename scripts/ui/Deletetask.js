@@ -37,3 +37,4 @@ export function setupDeleteTaskBtn() {
     currentTaskId = null;
   });
 }    
+console.log("Delete task button setup complete.");

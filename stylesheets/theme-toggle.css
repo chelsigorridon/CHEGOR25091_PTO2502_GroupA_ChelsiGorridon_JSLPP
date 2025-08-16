@@ -18,11 +18,9 @@ body.dark-mode #headline-sidepanel, #board-btn {
   color: var(--primary-color);
 }
 
-
-
-body.dark-mode  {
+body.dark-mode #layout{
   background-color: var(--black-butnot);
-  color: white;
+  color: var(--primary-color);
 }
 
 body.dark-mode .task-card {
@@ -60,7 +58,7 @@ body.dark-mode .sticky-header {
 }
 
 body.dark-mode .theme-toggle-div {
-  background-color: var(--primary-btn-color);
+  background-color: var(--primary-color);
 }
  
 body.dark-mode #sidebar-toggle  {
@@ -81,3 +79,5 @@ body.dark-mode .theme-switch  {
 body.dark-mode .theme-tog-div {
   background-color: var(--black-butnot);
 }
+
+

@@ -27,5 +27,5 @@ export function addNewTask() {
   clearExistingTasks();
   renderTasks(updatedTasks);
   resetForm();
-  overlay.close();
+  overlay(close);
 }
